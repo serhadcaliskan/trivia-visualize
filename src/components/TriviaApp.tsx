@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import {useTriviaApi} from '../hooks/useTriviaApi';
 import {Category, Difficulty, QuestionType} from '../types/trivia';
 import {ThemeTreemap} from './ThemeTreemap';
@@ -37,6 +37,8 @@ export const TriviaApp: React.FC = () => {
 
     const [isOpen, setIsOpen] = useState(true);
 
+    const hasFetched = useRef(false);
+
     const handleCategorySelect = (category: Category) => {
         setSettings(prev => ({...prev, category: category.id}));
     };
@@ -66,8 +68,9 @@ export const TriviaApp: React.FC = () => {
 
     // Auto-fetch 50 questions when the app opens (after we have a token)
     useEffect(() => {
-        if (hasToken && !isLoading && questions.length === 0) {
+        if (hasToken && !isLoading && questions.length === 0 && !hasFetched.current) {
             handleGetQuestions();
+            hasFetched.current = true;
         }
     }, [hasToken, isLoading, questions.length, handleGetQuestions]);
 
