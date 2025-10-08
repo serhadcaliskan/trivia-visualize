@@ -162,7 +162,7 @@ export const ThemeTreemap: React.FC<ThemeTreemapProps> = ({
 
     return (
         <div className="stats-panel">
-            <h3>Theme Distribution (Treemap)</h3>
+            <h3>Theme Distribution</h3>
             <div style={{width: '100%', height: 250, position: 'relative'}}>
                 {isEmpty ? (
                     <div
