@@ -1,0 +1,72 @@
+:root {
+    /* App brand */
+    --color-primary: #1E88E5; /* Blue 600 */
+    --color-secondary: #673AB7; /* Deep Purple 500 */
+    --color-primary-hover: #1976D2; /* Blue 700 */
+    --color-secondary-bg: #EDE7F6; /* Deep Purple 50 */
+    --color-secondary-hover: #D1C4E9; /* Deep Purple 100 */
+
+    /* Text and surfaces */
+    --color-text: #212121; /* Grey 900 */
+    --color-dark-text: #263238; /* Blue Grey 900 */
+    --color-white: #FFFFFF;
+    --color-light-gray: #FAFAFA; /* Grey 50 */
+    --color-gray-light: #E0E0E0; /* Grey 300 */
+    --color-border-gray: #E0E0E0; /* Grey 300 */
+    --color-gray-dark: #455A64; /* Blue Grey 700 */
+
+    /* Shadows */
+    --color-shadow-light: rgba(0, 0, 0, 0.06);
+    --color-shadow-main: rgba(0, 0, 0, 0.1);
+    --color-shadow-dark: rgba(0, 0, 0, 0.3);
+
+    /* Status colors */
+    --color-green: #4CAF50; /* Green 500 */
+    --color-red: #F44336; /* Red 500 */
+
+    /* Feedback surfaces */
+    --color-error-bg: #FFEBEE; /* Red 50 */
+    --color-error-border: #EF9A9A; /* Red 200 */
+    --color-error-text: #C62828; /* Red 800 */
+
+    --color-correct-bg: #E8F5E9; /* Green 50 */
+    --color-correct-border: #4CAF50; /* Green 500 */
+    --color-correct-text: #1B5E20; /* Green 900 */
+
+    --color-incorrect-bg: #FFEBEE; /* Red 50 */
+    --color-incorrect-border: #EF5350; /* Red 400 */
+    --color-incorrect-text: #B71C1C; /* Red 900 */
+
+    /* Informational text */
+    --color-info-text: #607D8B; /* Blue Grey 500 */
+    --color-hint-text: #90A4AE; /* Blue Grey 300 */
+
+    /* Loading overlays */
+    --color-loading-bg: rgba(0, 0, 0, 0.5);
+    --color-spinner-border: rgba(255, 255, 255, 0.3);
+    --color-spinner-top: #FFFFFF;
+
+    --opacity-09: 0.9;
+
+    /* Chart colors (Material) */
+    --color-type-multiple: #2196F3; /* Blue 500 */
+    --color-type-boolean: #673AB7; /* Deep Purple 500 */
+
+    --color-difficulty-easy: #43A047; /* Green 600 */
+    --color-difficulty-medium: #FFB300; /* Amber 600 */
+    --color-difficulty-hard: #E53935; /* Red 600 */
+
+    /* Default categorical palette (12) */
+    --color-default-1: #3F51B5; /* Indigo 500 */
+    --color-default-2: #009688; /* Teal 500 */
+    --color-default-3: #FFC107; /* Amber 500 */
+    --color-default-4: #FF5722; /* Deep Orange 500 */
+    --color-default-5: #03A9F4; /* Light Blue 500 */
+    --color-default-6: #8BC34A; /* Light Green 500 */
+    --color-default-7: #CDDC39; /* Lime 500 */
+    --color-default-8: #42A5F5; /* Blue 400 */
+    --color-default-9: #AB47BC; /* Purple 400 */
+    --color-default-10: #7E57C2; /* Deep Purple 400 */
+    --color-default-11: #00BCD4; /* Cyan 500 */
+    --color-default-12: #FF9800; /* Orange 500 */
+}

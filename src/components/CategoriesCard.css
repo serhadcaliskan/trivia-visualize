@@ -1,0 +1,123 @@
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: 0;
+    /*
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    */
+    margin-left: 0;
+    padding: 10px;
+    overflow: hidden; /* ensure children don't visually overflow container */
+    position: relative; /* allow absolute-positioned toggle */
+}
+
+/* Sidebar is fixed width via parent; remove internal width toggles */
+
+.categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px 10px 10px;
+}
+
+/* Improve sidebar toggle aesthetics and accessibility */
+.sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px; /* pill/circle */
+    border: 1px solid var(--color-border-gray);
+    background: var(--color-white);
+    color: var(--color-gray-dark);
+    cursor: pointer;
+    box-shadow: 0 2px 6px var(--color-shadow-light);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.05s ease;
+    z-index: 2; /* float above content */
+}
+
+.sidebar-toggle:hover {
+    background: var(--color-light-gray);
+    border-color: var(--color-secondary-hover);
+    box-shadow: 0 3px 10px var(--color-shadow-main);
+}
+
+.sidebar-toggle:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.sidebar-toggle:focus {
+    outline: none;
+}
+
+.sidebar-toggle:focus-visible {
+    box-shadow: 0 0 0 3px var(--color-secondary-bg), 0 3px 10px var(--color-shadow-main);
+    border-color: var(--color-secondary);
+}
+
+.categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 6px 10px 6px;
+    overflow-y: auto;
+    align-items: stretch; /* ensure buttons stretch to container width */
+    min-width: 0; /* allow children to shrink below their content width in flex layout */
+}
+
+.category-button {
+    padding: 10px 14px;
+    border: 2px solid var(--color-border-gray);
+    border-radius: 12px; /* keep rounded but allow multi-line height */
+    background-color: var(--color-white);
+    color: var(--color-dark-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* use flex so the label can shrink/wrap correctly */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* ensure button fills available width and doesn't force the parent wider */
+    width: 100%;
+    max-width: 100%;
+    min-width: 0; /* important for flex children so they can shrink */
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    /* ensure buttons themselves never show scrollbars */
+    overflow: visible;
+}
+
+/* label inside the button; keep text on single line with ellipsis */
+.category-label {
+    flex: 1 1 auto;
+    min-width: 0; /* critical so flex item can shrink below its content width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* allow a modifier for multi-line buttons if you prefer wrapping instead */
+.category-button--wrap {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.category-button:hover {
+    border-color: var(--color-secondary-hover);
+    background-color: var(--color-light-gray);
+}
+
+.category-button.selected {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
