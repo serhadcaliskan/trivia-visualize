@@ -9,6 +9,7 @@ Explore and visualize Open Trivia DB data with interactive charts. This React + 
 
 All visualizations respond to category selections from the sidebar or the treemap.
 
+Check out the live demo: https://serhadcaliskan.github.io/trivia-visualize/
 
 ## Features
 
@@ -112,4 +113,3 @@ No `.env` is required; the app uses the public OpenTDB API.
 
 - Open Trivia Database – https://opentdb.com
 - Recharts – https://recharts.org
-
